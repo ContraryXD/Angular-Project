@@ -1,0 +1,492 @@
+{
+  "Movies": [
+    {
+      "MovieID": 1,
+      "Title": "Dune: Part Two",
+      "Genre": "Sci-Fi",
+      "ReleaseDate": "03/01/2024",
+      "Duration": 155,
+      "Rating": 8.6,
+      "Image": "movie_1.jpg",
+      "TrailerURL": "Way9Dexny3w",
+      "Cast": "Timothée Chalamet, Zendaya, Rebecca Ferguson",
+      "Description": "Phần hai của bộ phim viễn tưởng nổi tiếng \"Dune\", tiếp tục câu chuyện về Paul Atreides."
+    },
+    {
+      "MovieID": 2,
+      "Title": "The Brutalist",
+      "Genre": "Drama",
+      "ReleaseDate": "12/20/2024",
+      "Duration": 140,
+      "Rating": 7.8,
+      "Image": "movie_2.jpg",
+      "TrailerURL": "GdRXPAHIEW4",
+      "Cast": "Adrien Brody, Felicity Jones, Guy Pearce",
+      "Description": "Bộ phim chính kịch về sự đấu tranh và đổi mới kiến trúc giữa thế kỷ 20."
+    },
+    {
+      "MovieID": 3,
+      "Title": "Ghostlight",
+      "Genre": "Comedy",
+      "ReleaseDate": "06/14/2024",
+      "Duration": 100,
+      "Rating": 7.5,
+      "Image": "movie_3.jpg",
+      "TrailerURL": "R1TycuGX4Mw",
+      "Cast": "Tony Hale, Ana Gasteyer, Steve Zahn",
+      "Description": "Một bộ phim hài xoay quanh cuộc sống của những người làm việc trong nhà hát."
+    },
+    {
+      "MovieID": 4,
+      "Title": "Nosferatu",
+      "Genre": "Horror",
+      "ReleaseDate": "12/25/2024",
+      "Duration": 110,
+      "Rating": 8.1,
+      "Image": "movie_4.jpg",
+      "TrailerURL": "nulvWqYUM8k",
+      "Cast": "Anya Taylor-Joy, Bill Skarsgård, Willem Dafoe",
+      "Description": "Bản làm lại của bộ phim kinh điển về ma cà rồng \"Nosferatu\"."
+    },
+    {
+      "MovieID": 5,
+      "Title": "The Wild Robot",
+      "Genre": "Animation",
+      "ReleaseDate": "09/27/2024",
+      "Duration": 95,
+      "Rating": 8.2,
+      "Image": "movie_5.jpg",
+      "TrailerURL": "67vbA5ZJdKQ",
+      "Cast": "Scarlett Johansson, Taron Egerton, Ben Whishaw",
+      "Description": "Một bộ phim hoạt hình về cuộc hành trình của một con robot hoang dã."
+    },
+    {
+      "MovieID": 6,
+      "Title": "Furiosa: A Mad Max Saga",
+      "Genre": "Action",
+      "ReleaseDate": "05/24/2024",
+      "Duration": 130,
+      "Rating": 8,
+      "Image": "movie_6.jpg",
+      "TrailerURL": "XJMuhwVlca4",
+      "Cast": "Anya Taylor-Joy, Chris Hemsworth, Yahya Abdul-Mateen II",
+      "Description": "Phần tiếp theo của bộ phim hành động \"Mad Max\", tập trung vào nhân vật Furiosa."
+    },
+    {
+      "MovieID": 7,
+      "Title": "The Substance",
+      "Genre": "Horror",
+      "ReleaseDate": "09/20/2024",
+      "Duration": 105,
+      "Rating": 7.4,
+      "Image": "movie_7.jpg",
+      "TrailerURL": "xRd1KZZ76_o",
+      "Cast": "Demi Moore, Margaret Qualley, Ray Liotta",
+      "Description": "Một bộ phim kinh dị xoay quanh sự xuất hiện của một chất lạ gây ra những hiện tượng kỳ bí."
+    },
+    {
+      "MovieID": 8,
+      "Title": "A Real Pain",
+      "Genre": "Comedy",
+      "ReleaseDate": "11/01/2024",
+      "Duration": 90,
+      "Rating": 7.3,
+      "Image": "movie_8.jpg",
+      "TrailerURL": "b2et8Vpu7Ls",
+      "Cast": "Nathan Fielder, Emma Stone, Jonah Hill",
+      "Description": "Một bộ phim hài về những tình huống dở khóc dở cười trong cuộc sống."
+    },
+    {
+      "MovieID": 9,
+      "Title": "Inside Out 2",
+      "Genre": "Animation",
+      "ReleaseDate": "06/14/2024",
+      "Duration": 95,
+      "Rating": 8.5,
+      "Image": "movie_9.jpg",
+      "TrailerURL": "LEjhY15eCx0",
+      "Cast": "Amy Poehler, Bill Hader, Mindy Kaling",
+      "Description": "Phần hai của bộ phim hoạt hình \"Inside Out\", tiếp tục khám phá cảm xúc bên trong của cô bé Riley."
+    },
+    {
+      "MovieID": 10,
+      "Title": "Captain America: Brave New World",
+      "Genre": "Action",
+      "ReleaseDate": "02/14/2025",
+      "Duration": 130,
+      "Rating": 8.4,
+      "Image": "movie_10.jpg",
+      "TrailerURL": "1pHDWnXmK7Y",
+      "Cast": "Anthony Mackie, Sebastian Stan, Emily VanCamp",
+      "Description": "Phần tiếp theo của loạt phim \"Captain America\", kể về hành trình mới của Sam Wilson với vai trò Captain America."
+    },
+    {
+      "MovieID": 11,
+      "Title": "Guardians of the Galaxy Vol. 3",
+      "Genre": "Action",
+      "ReleaseDate": "05/05/2024",
+      "Duration": 149,
+      "Rating": 8.3,
+      "Image": "movie_11.jpg",
+      "TrailerURL": "u3V5KDHRQvk",
+      "Cast": "Chris Pratt, Zoe Saldana, Dave Bautista",
+      "Description": "Phần ba của loạt phim siêu anh hùng \"Guardians of the Galaxy\"."
+    },
+    {
+      "MovieID": 12,
+      "Title": "The Batman: Arkham",
+      "Genre": "Action",
+      "ReleaseDate": "10/31/2024",
+      "Duration": 160,
+      "Rating": 8.7,
+      "Image": "movie_12.jpg",
+      "TrailerURL": "wsf78BS9VE0",
+      "Cast": "Robert Pattinson, Zoë Kravitz, Colin Farrell",
+      "Description": "Một phần mới trong loạt phim \"The Batman\", tập trung vào cuộc đối đầu với thế lực tội phạm trong Arkham."
+    },
+    {
+      "MovieID": 13,
+      "Title": "Fantastic Beasts: The Blue Flame",
+      "Genre": "Fantasy",
+      "ReleaseDate": "07/15/2025",
+      "Duration": 142,
+      "Rating": 7.9,
+      "Image": "movie_13.jpg",
+      "TrailerURL": "by_gr6oC9Fg",
+      "Cast": "Eddie Redmayne, Katherine Waterston, Jude Law",
+      "Description": "Phần tiếp theo của loạt phim \"Fantastic Beasts\", với cuộc phiêu lưu mới."
+    },
+    {
+      "MovieID": 14,
+      "Title": "Mission: Impossible - Dead Reckoning Part Two",
+      "Genre": "Action",
+      "ReleaseDate": "08/22/2025",
+      "Duration": 145,
+      "Rating": 8.5,
+      "Image": "movie_14.jpg",
+      "TrailerURL": "NOhDyUmT9z0",
+      "Cast": "Tom Cruise, Rebecca Ferguson, Simon Pegg",
+      "Description": "Phần hai của bộ phim hành động \"Mission: Impossible - Dead Reckoning\"."
+    },
+    {
+      "MovieID": 15,
+      "Title": "The Meg 2: The Trench",
+      "Genre": "Sci-Fi",
+      "ReleaseDate": "08/09/2024",
+      "Duration": 116,
+      "Rating": 7.1,
+      "Image": "movie_15.jpg",
+      "TrailerURL": "dG91B3hHyY4",
+      "Cast": "Jason Statham, Li Bingbing, Ruby Rose",
+      "Description": "Phần hai của bộ phim khoa học viễn tưởng \"The Meg\"."
+    },
+    {
+      "MovieID": 16,
+      "Title": "Avatar: The Way of Water",
+      "Genre": "Fantasy",
+      "ReleaseDate": "12/17/2024",
+      "Duration": 190,
+      "Rating": 8.9,
+      "Image": "movie_16.jpg",
+      "TrailerURL": "a8Gx8wiNbs8",
+      "Cast": "Sam Worthington, Zoe Saldana, Sigourney Weaver",
+      "Description": "Phần tiếp theo của bộ phim \"Avatar\", tiếp tục câu chuyện về Pandora."
+    },
+    {
+      "MovieID": 17,
+      "Title": "Joker: Folie à Deux",
+      "Genre": "Drama",
+      "ReleaseDate": "10/04/2025",
+      "Duration": 130,
+      "Rating": 8.8,
+      "Image": "movie_17.jpg",
+      "TrailerURL": "_OKAwz2MsJs",
+      "Cast": "Joaquin Phoenix, Lady Gaga, Zazie Beetz",
+      "Description": "Phần tiếp theo của bộ phim \"Joker\", khám phá thêm về sự điên rồ của nhân vật chính."
+    },
+    {
+      "MovieID": 18,
+      "Title": "Spider-Man: Beyond the Spider-Verse",
+      "Genre": "Animation",
+      "ReleaseDate": "04/08/2024",
+      "Duration": 120,
+      "Rating": 8.9,
+      "Image": "movie_18.jpg",
+      "TrailerURL": "D7pQ-S8QlC8",
+      "Cast": "Shameik Moore, Hailee Steinfeld, Mahershala Ali",
+      "Description": "Phần tiếp theo của bộ phim hoạt hình \"Spider-Man: Into the Spider-Verse\"."
+    },
+    {
+      "MovieID": 19,
+      "Title": "Black Panther: Wakanda Forever",
+      "Genre": "Action",
+      "ReleaseDate": "11/10/2024",
+      "Duration": 150,
+      "Rating": 8.6,
+      "Image": "movie_19.jpg",
+      "TrailerURL": "_Z3QKkl1WyM",
+      "Cast": "Letitia Wright, Winston Duke, Angela Bassett",
+      "Description": "Phần tiếp theo của bộ phim siêu anh hùng \"Black Panther\"."
+    },
+    {
+      "MovieID": 20,
+      "Title": "John Wick: Chapter 5",
+      "Genre": "Action",
+      "ReleaseDate": "03/21/2025",
+      "Duration": 135,
+      "Rating": 8.7,
+      "Image": "movie_20.jpg",
+      "TrailerURL": "zv3NDaFqjIc",
+      "Cast": "Keanu Reeves, Laurence Fishburne, Ian McShane",
+      "Description": "Phần tiếp theo của loạt phim hành động \"John Wick\"."
+    }
+  ],
+  "Theaters": [
+    {
+      "TheaterID": 1,
+      "Name": "Grand Cinema Downtown",
+      "Location": "123 Main St, Ho Chi Minh City"
+    },
+    {
+      "TheaterID": 2,
+      "Name": "Sunshine Cinema",
+      "Location": "456 Sunshine Ave, Ho Chi Minh City"
+    },
+    {
+      "TheaterID": 3,
+      "Name": "Starlight Theater",
+      "Location": "789 Star Rd, Ho Chi Minh City"
+    }
+  ],
+  "Showtimes": [
+    {
+      "ShowtimeID": 1,
+      "MovieID": 1,
+      "TheaterID": 1,
+      "ShowDateTime": "04/10/2025"
+    },
+    {
+      "ShowtimeID": 2,
+      "MovieID": 2,
+      "TheaterID": 2,
+      "ShowDateTime": "04/11/2025"
+    },
+    {
+      "ShowtimeID": 3,
+      "MovieID": 3,
+      "TheaterID": 1,
+      "ShowDateTime": "04/12/2025"
+    },
+    {
+      "ShowtimeID": 4,
+      "MovieID": 4,
+      "TheaterID": 2,
+      "ShowDateTime": "04/13/2025"
+    },
+    {
+      "ShowtimeID": 5,
+      "MovieID": 5,
+      "TheaterID": 3,
+      "ShowDateTime": "04/14/2025"
+    },
+    {
+      "ShowtimeID": 6,
+      "MovieID": 6,
+      "TheaterID": 1,
+      "ShowDateTime": "04/15/2025"
+    },
+    {
+      "ShowtimeID": 7,
+      "MovieID": 7,
+      "TheaterID": 2,
+      "ShowDateTime": "04/16/2025"
+    },
+    {
+      "ShowtimeID": 8,
+      "MovieID": 8,
+      "TheaterID": 3,
+      "ShowDateTime": "04/17/2025"
+    },
+    {
+      "ShowtimeID": 9,
+      "MovieID": 9,
+      "TheaterID": 1,
+      "ShowDateTime": "04/18/2025"
+    },
+    {
+      "ShowtimeID": 10,
+      "MovieID": 10,
+      "TheaterID": 2,
+      "ShowDateTime": "04/19/2025"
+    },
+    {
+      "ShowtimeID": 11,
+      "MovieID": 11,
+      "TheaterID": 3,
+      "ShowDateTime": "04/20/2025"
+    },
+    {
+      "ShowtimeID": 12,
+      "MovieID": 12,
+      "TheaterID": 1,
+      "ShowDateTime": "04/21/2025"
+    },
+    {
+      "ShowtimeID": 13,
+      "MovieID": 13,
+      "TheaterID": 2,
+      "ShowDateTime": "04/22/2025"
+    },
+    {
+      "ShowtimeID": 14,
+      "MovieID": 14,
+      "TheaterID": 3,
+      "ShowDateTime": "04/23/2025"
+    },
+    {
+      "ShowtimeID": 15,
+      "MovieID": 15,
+      "TheaterID": 1,
+      "ShowDateTime": "04/24/2025"
+    },
+    {
+      "ShowtimeID": 16,
+      "MovieID": 16,
+      "TheaterID": 2,
+      "ShowDateTime": "04/25/2025"
+    },
+    {
+      "ShowtimeID": 17,
+      "MovieID": 17,
+      "TheaterID": 3,
+      "ShowDateTime": "04/26/2025"
+    },
+    {
+      "ShowtimeID": 18,
+      "MovieID": 18,
+      "TheaterID": 1,
+      "ShowDateTime": "04/27/2025"
+    },
+    {
+      "ShowtimeID": 19,
+      "MovieID": 19,
+      "TheaterID": 2,
+      "ShowDateTime": "04/28/2025"
+    },
+    {
+      "ShowtimeID": 20,
+      "MovieID": 20,
+      "TheaterID": 3,
+      "ShowDateTime": "04/29/2025"
+    }
+  ],
+  "Bookings": [
+    {
+      "BookingID": 1,
+      "UserID": 1,
+      "ShowtimeID": 1,
+      "Seats": 2,
+      "BookingDateTime": "04/01/2025"
+    },
+    {
+      "BookingID": 2,
+      "UserID": 2,
+      "ShowtimeID": 2,
+      "Seats": 3,
+      "BookingDateTime": "04/02/2025"
+    },
+    {
+      "BookingID": 3,
+      "UserID": 1,
+      "ShowtimeID": 3,
+      "Seats": 1,
+      "BookingDateTime": "04/05/2025"
+    },
+    {
+      "BookingID": 4,
+      "UserID": 2,
+      "ShowtimeID": 4,
+      "Seats": 4,
+      "BookingDateTime": "04/06/2025"
+    },
+    {
+      "BookingID": 5,
+      "UserID": 3,
+      "ShowtimeID": 5,
+      "Seats": 2,
+      "BookingDateTime": "04/07/2025"
+    },
+    {
+      "BookingID": 6,
+      "UserID": 1,
+      "ShowtimeID": 6,
+      "Seats": 5,
+      "BookingDateTime": "04/08/2025"
+    },
+    {
+      "BookingID": 7,
+      "UserID": 3,
+      "ShowtimeID": 7,
+      "Seats": 3,
+      "BookingDateTime": "04/09/2025"
+    },
+    {
+      "BookingID": 8,
+      "UserID": 2,
+      "ShowtimeID": 8,
+      "Seats": 2,
+      "BookingDateTime": "04/10/2025"
+    },
+    {
+      "BookingID": 9,
+      "UserID": 1,
+      "ShowtimeID": 9,
+      "Seats": 1,
+      "BookingDateTime": "04/11/2025"
+    },
+    {
+      "BookingID": 10,
+      "UserID": 3,
+      "ShowtimeID": 10,
+      "Seats": 4,
+      "BookingDateTime": "04/12/2025"
+    }
+  ],
+  "Users": [
+    {
+      "UserID": 1,
+      "UserName": "JohnDoe",
+      "Email": "john@example.com",
+      "Password": "123"
+    },
+    {
+      "UserID": 2,
+      "UserName": "JaneSmith",
+      "Email": "jane@example.com",
+      "Password": "123"
+    },
+    {
+      "UserID": 3,
+      "UserName": "EmilyJones",
+      "Email": "emily@example.com",
+      "Password": "123"
+    }
+  ],
+  "Admins": [
+    {
+      "AdminID": 1,
+      "Username": "admin1",
+      "Password": "123"
+    },
+    {
+      "AdminID": 2,
+      "Username": "admin2",
+      "Password": "123"
+    },
+    {
+      "AdminID": 3,
+      "Username": "admin3",
+      "Password": "123"
+    }
+  ]
+}

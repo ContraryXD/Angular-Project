@@ -1,0 +1,14 @@
+/src
+ ├── /app
+ │   ├── /pages
+ │   │   ├── /home        → Homepage (movie listings, promotions, etc.)
+ │   │   ├── /movies      → Movie details and showtimes
+ │   │   ├── /booking     → Seat selection and booking process
+ │   │   ├── /checkout    → Payment confirmation page
+ │   │   ├── /profile     → User profile & booking history (optional)
+ │   │   ├── /admin       → Admin dashboard (if needed)
+ │   │   └── /not-found   → 404 page (optional)
+ │   ├── /components     → Reusable components (e.g., navbar, footer, movie-card)
+ │   ├── /services       → Services for API calls (if fetching data)
+ │   ├── /models         → TypeScript interfaces (Movie, Booking, User, etc.)
+ │   ├── /assets         → Images, logos, etc.

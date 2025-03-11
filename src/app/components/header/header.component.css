@@ -1,0 +1,27 @@
+.navbar {
+  background-color: transparent;
+  border-bottom: 1px solid #def2f1; /* Ensure border style and width are defined */
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.3s ease-in-out;
+  color: #17252a;
+  font-size: large;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-brand {
+  transition: transform 0.3s ease-in-out;
+  color: #17252a;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: "Lobster", cursive;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+}

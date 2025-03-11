@@ -1,0 +1,31 @@
+<div class="container-fluid background">
+  <div class="hero">
+    <div class="text-center">
+      <h1>Eclipse Cinema</h1>
+      <p class="lead">Đặt vé nhanh và dễ dàng.</p>
+      <a href="booking.php" class="btn btn-primary btn-lg">Đặt ngay</a>
+    </div>
+  </div>
+  <!-- nội dung -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Đang chiếu</h2>
+    <div class="row justify-content-center">
+      @for ( item of randomMovies; track $index) {
+      <div class="col-md-4 mb-4 d-flex align-items-stretch">
+        <div class="card h-100">
+          <img
+            [src]="'/assets/images/' + item.Image"
+            class="card-img-top"
+            [alt]="item.Name"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ item.Title }}</h5>
+            <p class="card-text flex-grow-1">{{ item.Description }}</p>
+            <a href="booking.php" class="btn btn-primary mt-auto">Đặt vé</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
