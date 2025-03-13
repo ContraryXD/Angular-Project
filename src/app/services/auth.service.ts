@@ -21,12 +21,20 @@ export class AuthService {
           this.isAuthenticated = true;
           this.isAdmin = false;
           this.currentUser = userCustomer;
-          this.router.navigate(['']);
+          this.router.navigate(['/']);
           return true;
         } else {
           this.isAuthenticated = false;
           return false;
         }
+      })
+    );
+  }
+
+  signUpCustomer(newUser: any): Observable<boolean> {
+    return this.usersService.addUser(newUser).pipe(
+      map(response => {
+        return response ? true : false;
       })
     );
   }
@@ -38,7 +46,7 @@ export class AuthService {
           this.isAuthenticated = true;
           this.isAdmin = true;
           this.currentUser = userAdmin;
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['/dashboard']);
           return true;
         } else {
           this.isAuthenticated = false;

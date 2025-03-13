@@ -1,47 +1,75 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
-  <div
-    class="card shadow-lg p-4"
-    style="max-width: 400px; width: 100%; border-radius: 10px"
-  >
+  <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 10px">
     <div class="text-center">
       <i class="fas fa-user-circle" style="font-size: 3rem; color: #17252a"></i>
       <h3 class="mt-2">Customer Login</h3>
     </div>
-    <form (ngSubmit)="onSubmit()">
-      <div class="mb-3">
-        <label for="email" class="form-label fw-bold">Email</label>
-        <div class="input-group">
-          <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            [(ngModel)]="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
+    <ul class="nav nav-tabs" id="loginSignUpTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button"
+          role="tab" aria-controls="login" aria-selected="true">Login</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab"
+          aria-controls="signup" aria-selected="false">Sign Up</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="loginSignUpTabsContent">
+      <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+        <form (ngSubmit)="onLogin()">
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email"
+                placeholder="Enter your email" required />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label fw-bold">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password"
+                placeholder="Enter your password" required />
+            </div>
+          </div>
+          <button type="submit" class="btn main-color text-light w-100 py-2">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="password" class="form-label fw-bold">Password</label>
-        <div class="input-group">
-          <span class="input-group-text"><i class="fas fa-lock"></i></span>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            [(ngModel)]="password"
-            name="password"
-            placeholder="Enter your password"
-            required
-          />
-        </div>
+      <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+        <form (ngSubmit)="onSignUp()">
+          <div class="mb-3">
+            <label for="signUpEmail" class="form-label fw-bold">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              <input type="email" class="form-control" id="signUpEmail" [(ngModel)]="signUpEmail" name="signUpEmail"
+                placeholder="Enter your email" required />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="signUpPassword" class="form-label fw-bold">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              <input type="password" class="form-control" id="signUpPassword" [(ngModel)]="signUpPassword"
+                name="signUpPassword" placeholder="Enter your password" required />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="signUpUserName" class="form-label fw-bold">User Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <input type="text" class="form-control" id="signUpUserName" [(ngModel)]="signUpUserName"
+                name="signUpUserName" placeholder="Enter your user name" required />
+            </div>
+          </div>
+          <button type="submit" class="btn main-color text-light w-100 py-2">
+            <i class="fas fa-user-plus"></i> Sign Up
+          </button>
+        </form>
       </div>
-      <button type="submit" class="btn main-color text-light w-100 py-2">
-        <i class="fas fa-sign-in-alt"></i> Login
-      </button>
-    </form>
+    </div>
     <p class="text-center mt-3">
       <a href="#" class="text-decoration-none">Forgot password?</a>
     </p>

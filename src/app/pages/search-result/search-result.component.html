@@ -1,0 +1,16 @@
+<div class="container mt-5 text-center">
+    <h2>Search Results for "{{ searchQuery }}"</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4" *ngFor="let movie of searchResults">
+            <div class="card h-100">
+                <img [src]="'/assets/images/' + movie.Image" class="card-img-top" [alt]="movie.Title" />
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ movie.Title }}</h5>
+                    <p class="card-text flex-grow-1">{{ movie.Description }}</p>
+                    <a [routerLink]="['/movie-details']" [queryParams]="{ movieId: movie.id }"
+                        class="btn btn-primary mt-auto">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

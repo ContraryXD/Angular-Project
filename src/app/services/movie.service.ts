@@ -29,4 +29,8 @@ export class MoviesService {
   deleteMovie(movieId: string): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${movieId}`);
   }
+
+  searchMovies(query: string): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
 }

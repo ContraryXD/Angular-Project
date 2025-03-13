@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -13,11 +14,13 @@ export class AdminLoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   onSubmit() {
     this.authService.loginAdmin(this.email, this.password).subscribe(success => {
-      if (!success) {
+      if (success) {
+        this.router.navigate(['/dashboard']);
+      } else {
         alert('Invalid credentials');
       }
     });

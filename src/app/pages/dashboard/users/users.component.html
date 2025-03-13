@@ -1,12 +1,13 @@
 <div class="container mt-3">
     <h3>Users</h3>
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#userModal"
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalId"
         (click)="prepareModal('add')">Add User</button>
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
                 <th>UserName</th>
                 <th>Email</th>
+                <th>Password</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -14,8 +15,9 @@
             <tr *ngFor="let user of users">
                 <td>{{ user.UserName }}</td>
                 <td>{{ user.Email }}</td>
+                <td>{{ user.Password }}</td>
                 <td>
-                    <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" data-bs-target="#userModal"
+                    <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" data-bs-target="#modalId"
                         (click)="prepareModal('edit', user)">Edit</button>
                     <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
                 </td>
@@ -24,33 +26,46 @@
     </table>
 
     <!-- Modal Body -->
-    <div class="modal fade" id="userModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-        role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="userModalLabel">{{ modalTitle }}</h5>
+                    <h5 class="modal-title" id="modalTitleId">{{ modalTitle }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="userName" class="form-label">UserName</label>
-                            <input type="text" class="form-control" id="userName" [(ngModel)]="selectedUser.UserName"
-                                name="userName">
+                            <label for="userName" class="form-label">User Name</label>
+                            <input type="text" class="form-control" name="userName" id="userName"
+                                placeholder="User Name" [(ngModel)]="selectedUser.UserName">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" [(ngModel)]="selectedUser.Email"
-                                name="email">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                                [(ngModel)]="selectedUser.Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Password" [(ngModel)]="selectedUser.Password">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" (click)="onSave()">Save changes</button>
+                    <button type="button" class="btn btn-primary" (click)="onSave()">Save</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Optional: Place to the bottom of scripts -->
+<script>
+    const myModal = new bootstrap.Modal(
+        document.getElementById("modalId"),
+        options,
+    );
+</script>

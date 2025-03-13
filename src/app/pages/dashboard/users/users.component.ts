@@ -29,7 +29,7 @@ export class UsersComponent {
   prepareModal(action: string, user?: any): void {
     if (action === 'add') {
       this.modalTitle = 'Add User';
-      this.selectedUser = {};
+      this.selectedUser = { UserName: '', Email: '', Password: '' };
     } else if (action === 'edit') {
       this.modalTitle = 'Edit User';
       this.selectedUser = { ...user };
@@ -46,8 +46,6 @@ export class UsersComponent {
         this.fetchUsers();
       });
     }
-    const modal = bootstrap.Modal.getInstance(document.getElementById('userModal')!);
-    modal.hide();
   }
 
   deleteUser(userId: string): void {

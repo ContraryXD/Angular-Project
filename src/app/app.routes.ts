@@ -8,6 +8,7 @@ import { authGuard } from './services/auth.guard';
 import { AccountComponent } from './pages/account/account.component';
 import { BookingComponent } from './pages/booking/booking.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { SearchResultComponent } from './pages/search-result/search-result.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, title: 'Home' },
@@ -15,9 +16,10 @@ export const routes: Routes = [
     { path: 'login', component: CustomerLoginComponent, title: 'Customer Login' },
     { path: 'admin', component: AdminLoginComponent, title: 'Admin Login' },
     { path: 'dashboard', component: DashboardComponent, canActivate: [authGuard], title: 'Admin Dashboard' },
-    { path: 'home', component: HomeComponent, canActivate: [authGuard], title: 'Home' },
+    { path: 'home', component: HomeComponent, title: 'Home' },
     { path: 'account', component: AccountComponent, canActivate: [authGuard], title: 'Account' },
     { path: 'booking', component: BookingComponent, canActivate: [authGuard], title: 'Booking' },
-    { path: 'movie-details', component: MovieDetailsComponent, title: 'Movie Details' }
+    { path: 'movie-details', component: MovieDetailsComponent, title: 'Movie Details' },
+    { path: 'search', component: SearchResultComponent, title: 'Search Results' }
 
 ];

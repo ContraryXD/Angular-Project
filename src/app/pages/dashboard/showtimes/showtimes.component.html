@@ -1,6 +1,7 @@
 <div class="container mt-3">
     <h3>Showtimes</h3>
-    <button class="btn btn-primary mb-3" (click)="addShowtime()">Add Showtime</button>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#showtimeModal"
+        (click)="prepareModal('add')">Add Showtime</button>
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
@@ -12,12 +13,47 @@
         <tbody>
             <tr *ngFor="let showtime of showtimes">
                 <td>{{ showtime.ShowDateTime }}</td>
-                <td>{{ showtime.theater }}</td>
+                <td>{{ getTheaterName(showtime.TheaterID) }}</td>
                 <td>
-                    <button class="btn btn-warning btn-sm me-2" (click)="editShowtime(showtime)">Edit</button>
+                    <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" data-bs-target="#showtimeModal"
+                        (click)="prepareModal('edit', showtime)">Edit</button>
                     <button class="btn btn-danger btn-sm" (click)="deleteShowtime(showtime.id)">Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="showtimeModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="showtimeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="showtimeModalLabel">{{ modalTitle }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="showDateTime" class="form-label">Showtime</label>
+                            <input type="text" class="form-control" name="showDateTime" id="showDateTime"
+                                placeholder="Showtime" [(ngModel)]="selectedShowtime.ShowDateTime">
+                        </div>
+                        <div class="mb-3">
+                            <label for="theaterID" class="form-label">Theater</label>
+                            <select class="form-select" name="theaterID" id="theaterID"
+                                [(ngModel)]="selectedShowtime.TheaterID">
+                                <option *ngFor="let theater of theaters" [value]="theater.id">{{ theater.Name }}
+                                </option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="onSave()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

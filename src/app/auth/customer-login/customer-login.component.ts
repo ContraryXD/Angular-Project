@@ -13,15 +13,37 @@ import { AuthService } from '../../services/auth.service';
 export class CustomerLoginComponent {
   email: string = '';
   password: string = '';
+  signUpEmail: string = '';
+  signUpPassword: string = '';
+  signUpUserName: string = '';
 
   constructor(private authService: AuthService, private router: Router) { }
 
-  onSubmit() {
+  onLogin() {
     this.authService.loginCustomer(this.email, this.password).subscribe(success => {
       if (success) {
         this.router.navigate(['/account']);
       } else {
         alert('Invalid credentials');
+      }
+    });
+  }
+
+  onSignUp() {
+    const newUser = {
+      email: this.signUpEmail,
+      password: this.signUpPassword,
+      userName: this.signUpUserName
+    };
+    this.authService.signUpCustomer(newUser).subscribe(success => {
+      if (success) {
+        alert('Sign up successful! Please log in.');
+        const loginTab = document.getElementById('login-tab');
+        if (loginTab) {
+          loginTab.click();
+        }
+      } else {
+        alert('Sign up failed');
       }
     });
   }

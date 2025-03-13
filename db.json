@@ -384,9 +384,9 @@
     {
       "id": "21eb",
       "movieId": "30a2",
-      "showtimeId": "d7e8",
+      "showtimeId": "597d",
       "theaterId": "5511",
-      "seats": 8
+      "seats": 112
     },
     {
       "id": "52a9",
@@ -398,7 +398,7 @@
   ],
   "Users": [
     {
-      "UserName": "Updated User",
+      "UserName": "itc1",
       "Email": "itc1@gmail.com",
       "Password": "123",
       "id": "ed47"
@@ -414,6 +414,18 @@
       "Email": "itc3@gmail.com",
       "Password": "123",
       "id": "d272"
+    },
+    {
+      "id": "b583",
+      "UserName": "Hi",
+      "Email": "123@mail.com",
+      "Password": "123"
+    },
+    {
+      "id": "e3a8",
+      "email": "VIP@gmail.com",
+      "password": "123",
+      "userName": "vjpvjp@gmail.com"
     }
   ],
   "Admins": [

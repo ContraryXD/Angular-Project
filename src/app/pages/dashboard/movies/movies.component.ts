@@ -1,15 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MoviesService } from '../../../services/movie.service';
+import { FormsModule } from '@angular/forms';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-movies',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css'
 })
-export class MoviesComponent {
+export class MoviesComponent implements OnInit {
   movies: any[] = [];
+  selectedMovie: any = {};
+  modalTitle: string = '';
 
   constructor(private moviesService: MoviesService) { }
 
@@ -23,18 +27,26 @@ export class MoviesComponent {
     });
   }
 
-  addMovie(): void {
-    const newMovie = { Title: 'New Movie', Genre: 'Genre', ReleaseDate: '01/01/2023', Duration: 120, Rating: 5, Image: 'movie.jpg', TrailerURL: '', Cast: '', Description: '' };
-    this.moviesService.addMovie(newMovie).subscribe(() => {
-      this.fetchMovies();
-    });
+  prepareModal(action: string, movie?: any): void {
+    if (action === 'add') {
+      this.modalTitle = 'Add Movie';
+      this.selectedMovie = { Title: '', Genre: '' };
+    } else if (action === 'edit') {
+      this.modalTitle = 'Edit Movie';
+      this.selectedMovie = { ...movie };
+    }
   }
 
-  editMovie(movie: any): void {
-    const updatedMovie = { ...movie, Title: 'Updated Movie' };
-    this.moviesService.updateMovie(updatedMovie).subscribe(() => {
-      this.fetchMovies();
-    });
+  onSave(): void {
+    if (this.modalTitle === 'Add Movie') {
+      this.moviesService.addMovie(this.selectedMovie).subscribe(() => {
+        this.fetchMovies();
+      });
+    } else if (this.modalTitle === 'Edit Movie') {
+      this.moviesService.updateMovie(this.selectedMovie).subscribe(() => {
+        this.fetchMovies();
+      });
+    }
   }
 
   deleteMovie(movieId: string): void {
