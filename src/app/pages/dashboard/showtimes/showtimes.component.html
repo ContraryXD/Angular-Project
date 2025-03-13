@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <h3>Showtimes</h3>
+    <button class="btn btn-primary mb-3" (click)="addShowtime()">Add Showtime</button>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Showtime</th>
+                <th>Theater</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let showtime of showtimes">
+                <td>{{ showtime.ShowDateTime }}</td>
+                <td>{{ showtime.theater }}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm me-2" (click)="editShowtime(showtime)">Edit</button>
+                    <button class="btn btn-danger btn-sm" (click)="deleteShowtime(showtime.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

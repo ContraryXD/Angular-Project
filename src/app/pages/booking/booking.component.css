@@ -1,0 +1,11 @@
+.container {
+  padding-top: 75px;
+}
+
+.booking select {
+  color: #000 !important; /* Ensure the text color of the select element is black */
+}
+
+.booking select option {
+  color: #000 !important; /* Ensure the text color of the options is black */
+}

@@ -1,0 +1,27 @@
+<div class="container mt-3">
+    <h3>Bookings</h3>
+    <button class="btn btn-primary mb-3" (click)="addBooking()">Add Booking</button>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Movie</th>
+                <th>Showtime</th>
+                <th>Theater</th>
+                <th>Seats</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let booking of bookings">
+                <td>{{ booking.movieTitle }}</td>
+                <td>{{ booking.showtime }}</td>
+                <td>{{ booking.theater }}</td>
+                <td>{{ booking.seats }}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm me-2" (click)="editBooking(booking)">Edit</button>
+                    <button class="btn btn-danger btn-sm" (click)="deleteBooking(booking.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

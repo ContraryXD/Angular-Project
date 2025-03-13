@@ -1,0 +1,50 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Book Your Movie</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="'/assets/images/' + movie?.Image" alt="{{ movie?.Title }}" class="img-fluid" />
+        </div>
+        <div class="col-md-8">
+            <h4>{{ movie?.Title }}</h4>
+            <p>{{ movie?.Description }}</p>
+            <form class="booking text-dark" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="showtime" class="form-label">Select Showtime</label>
+                    <select class="form-select" id="showtime" [(ngModel)]="booking.showtimeId" name="showtime" required>
+                        <option *ngFor="let showtime of showtimes" [value]="showtime.id">{{ showtime.ShowDateTime }}
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="theater" class="form-label">Select Theater</label>
+                    <select class="form-select" id="theater" [(ngModel)]="booking.theaterId" name="theater" required>
+                        <option *ngFor="let theater of theaters" [value]="theater.id">{{ theater.Name }}</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="seats" class="form-label">Number of Seats</label>
+                    <input type="number" class="form-control" id="seats" [(ngModel)]="booking.seats" name="seats"
+                        required>
+                </div>
+                <h5>Payment Information</h5>
+                <div class="mb-3">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cardName" class="form-label">Card Name</label>
+                    <input type="text" class="form-control" id="cardName" name="cardName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="expiryDate" class="form-label">Expiry Date</label>
+                    <input type="text" class="form-control" id="expiryDate" name="expiryDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container-fluid d-flex">
+  <div class="sidebar">
+    <h3 class="text-center">Admin Panel</h3>
+    <hr />
+    <ul class="nav flex-column" id="dashboardTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button"
+          role="tab" aria-controls="users" aria-selected="true">Users</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="movies-tab" data-bs-toggle="tab" data-bs-target="#movies" type="button" role="tab"
+          aria-controls="movies" aria-selected="false">Movies</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button"
+          role="tab" aria-controls="bookings" aria-selected="false">Bookings</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="showtimes-tab" data-bs-toggle="tab" data-bs-target="#showtimes" type="button"
+          role="tab" aria-controls="showtimes" aria-selected="false">Showtimes</button>
+      </li>
+    </ul>
+  </div>
+  <div class="content flex-grow-1 p-3">
+    <div class="mt-4">
+      <h5>Welcome to the Admin Panel</h5>
+      <p>Manage bookings, users, movies, and showtimes with ease.</p>
+    </div>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Dashboard</h2>
+      <div class="tab-content" id="dashboardTabsContent">
+        <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+          <app-users></app-users>
+        </div>
+        <div class="tab-pane fade" id="movies" role="tabpanel" aria-labelledby="movies-tab">
+          <app-movies></app-movies>
+        </div>
+        <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+          <app-bookings></app-bookings>
+        </div>
+        <div class="tab-pane fade" id="showtimes" role="tabpanel" aria-labelledby="showtimes-tab">
+          <app-showtimes></app-showtimes>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

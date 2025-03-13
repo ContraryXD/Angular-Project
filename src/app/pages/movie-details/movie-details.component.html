@@ -1,0 +1,29 @@
+<div class="hero" style="background-image: url('/assets/images/{{ movie?.Hero }}');
+">
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="'/assets/images/' + movie?.Image" alt="{{ movie?.Title }}" class="img-fluid" />
+        </div>
+        <div class="col-md-8">
+            <h2>{{ movie?.Title }}</h2>
+            <p><strong>Genre:</strong> {{ movie?.Genre }}</p>
+            <p><strong>Release Date:</strong> {{ movie?.ReleaseDate }}</p>
+            <p><strong>Duration:</strong> {{ movie?.Duration }} minutes</p>
+            <p><strong>Rating:</strong> {{ movie?.Rating }}</p>
+            <p><strong>Cast:</strong> {{ movie?.Cast }}</p>
+            <p>{{ movie?.Description }}</p>
+            <a [routerLink]="['/booking']" [queryParams]="{ movieId: movie?.id }" class="btn btn-primary">Đặt vé</a>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h3>Trailer</h3>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" [src]="trailerUrl" allowfullscreen
+                            style="width: 100%; height: 500px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,13 @@
 .navbar {
-  background-color: transparent;
-  border-bottom: 1px solid #def2f1; /* Ensure border style and width are defined */
+  background-color: #3aafa9;
+  border-bottom: 1px solid #def2f1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: #2b7a77;
+  border-bottom: 1px solid #def2f1;
+  color: #feffff;
 }
 
 .navbar-nav .nav-link {
@@ -24,4 +31,11 @@
 
 .navbar-brand:hover {
   transform: scale(1.1);
+}
+
+.btn {
+  background-color: #17252a;
+  border: none;
+  color: #feffff;
+  transition: background-color 0.3s ease-in-out;
 }

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { MovieService } from '../../services/movie.service';
+import { MoviesService } from '../../services/movie.service';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -12,7 +14,7 @@ export class HomeComponent {
   movies: any[] = [];
   randomMovies: any[] = [];
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MoviesService) { }
 
 
   ngOnInit() {

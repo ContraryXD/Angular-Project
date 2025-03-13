@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">User Account</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow-sm rounded">
+                <div class="card-body">
+                    <h4 class="card-title">User Details</h4>
+                    <p><strong>Name:</strong> {{ user?.UserName }}</p>
+                    <p><strong>Email:</strong> {{ user?.Email }}</p>
+                    <p><strong>ID:</strong> {{ user?.id }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-sm rounded">
+                <div class="card-body">
+                    <h4 class="card-title">Bookings</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Movie</th>
+                                <th>Showtime</th>
+                                <th>Theater</th>
+                                <th>Seats</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let booking of bookings">
+                                <td>{{ booking.movieTitle }}</td>
+                                <td>{{ booking.showtime }}</td>
+                                <td>{{ booking.theater }}</td>
+                                <td>{{ booking.seats }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
