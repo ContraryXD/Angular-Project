@@ -17,8 +17,7 @@
             <p class="card-text text-truncate" style="max-height: 3em; overflow: hidden">
               {{ item.Description }}
             </p>
-            <a [routerLink]="['/movie-details']" [queryParams]="{ movieId: item.id }"
-              class="btn btn-primary mt-auto">Chi tiết</a>
+            <a [routerLink]="['/movie-details']" [queryParams]="{ movieId: item.id }" class="btn btn-primary mt-auto">Chi tiết</a>
           </div>
         </div>
       </div>
@@ -40,8 +39,7 @@
             </div>
             <div class="col-md-3">
               <div class="card-body d-flex flex-column">
-                <a [routerLink]="['/movie-details']" [queryParams]="{ movieId: item.id }"
-                  class="btn btn-primary mt-auto">Chi tiết</a>
+                <a [routerLink]="['/movie-details']" [queryParams]="{ movieId: item.id }" class="btn btn-primary mt-auto">Chi tiết</a>
               </div>
             </div>
           </div>

@@ -1,56 +1,81 @@
 <div class="container mt-3">
-    <h3>Movies</h3>
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#movieModal"
-        (click)="prepareModal('add')">Add Movie</button>
-    <table class="table table-bordered table-hover">
-        <thead class="table-dark">
-            <tr>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let movie of movies">
-                <td>{{ movie.Title }}</td>
-                <td>{{ movie.Genre }}</td>
-                <td>
-                    <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" data-bs-target="#movieModal"
-                        (click)="prepareModal('edit', movie)">Edit</button>
-                    <button class="btn btn-danger btn-sm" (click)="deleteMovie(movie.id)">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+  <h3>Movies</h3>
+  <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#movieModal" (click)="prepareModal('add')">Add Movie</button>
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>{{ movie.Title }}</td>
+        <td>{{ movie.Genre }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" data-bs-target="#movieModal" (click)="prepareModal('edit', movie)">
+            Edit
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteMovie(movie.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    <!-- Modal Body -->
-    <div class="modal fade" id="movieModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-        role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="movieModalLabel">{{ modalTitle }}</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="title" class="form-label">Title</label>
-                            <input type="text" class="form-control" name="title" id="title" placeholder="Title"
-                                [(ngModel)]="selectedMovie.Title">
-                        </div>
-                        <div class="mb-3">
-                            <label for="genre" class="form-label">Genre</label>
-                            <input type="text" class="form-control" name="genre" id="genre" placeholder="Genre"
-                                [(ngModel)]="selectedMovie.Genre">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" (click)="onSave()">Save</button>
-                </div>
-            </div>
+  <!-- Modal Body -->
+  <div
+    class="modal fade"
+    id="movieModal"
+    tabindex="-1"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    role="dialog"
+    aria-labelledby="movieModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalLabel">{{ modalTitle }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" name="title" id="title" placeholder="Title" [(ngModel)]="selectedMovie.Title" />
+            </div>
+            <div class="mb-3">
+              <label for="genre" class="form-label">Genre</label>
+              <input type="text" class="form-control" name="genre" id="genre" placeholder="Genre" [(ngModel)]="selectedMovie.Genre" />
+            </div>
+            <div class="mb-3">
+              <label for="releaseDate" class="form-label">Release Date</label>
+              <input type="date" class="form-control" name="releaseDate" id="releaseDate" [(ngModel)]="selectedMovie.ReleaseDate" />
+            </div>
+            <div class="mb-3">
+              <label for="duration" class="form-label">Duration (minutes)</label>
+              <input type="number" class="form-control" name="duration" id="duration" placeholder="Duration" [(ngModel)]="selectedMovie.Duration" />
+            </div>
+            <div class="mb-3">
+              <label for="rating" class="form-label">Rating (1-10)</label>
+              <input type="number" class="form-control" name="rating" id="rating" placeholder="Rating" [(ngModel)]="selectedMovie.Rating" />
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Price (VND)</label>
+              <input type="number" class="form-control" name="price" id="price" placeholder="Price" [(ngModel)]="selectedMovie.Price" />
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" name="description" id="description" rows="3" [(ngModel)]="selectedMovie.Description"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="onSave()">Save</button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

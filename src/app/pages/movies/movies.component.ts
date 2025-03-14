@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movie.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-movies',
@@ -24,5 +25,9 @@ export class MoviesComponent implements OnInit {
 
   toggleView() {
     this.isGridView = !this.isGridView;
+  }
+
+  trackByFn(index: number, item: any): string {
+    return item.id;
   }
 }

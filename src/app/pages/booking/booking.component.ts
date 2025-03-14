@@ -23,6 +23,7 @@ export class BookingComponent implements OnInit {
     theaterId: null,
     seats: 1
   };
+  totalPrice: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -39,6 +40,7 @@ export class BookingComponent implements OnInit {
       this.moviesService.getMovieById(movieId).subscribe(movie => {
         this.movie = movie;
         this.booking.movieId = movie.id;
+        this.calculateTotalPrice();
       });
       this.fetchShowtimes();
       this.fetchTheaters();
@@ -57,6 +59,12 @@ export class BookingComponent implements OnInit {
     this.theatersService.getTheaters().subscribe(theaters => {
       this.theaters = theaters;
     });
+  }
+
+  calculateTotalPrice(): void {
+    if (this.movie && this.booking.seats > 0) {
+      this.totalPrice = this.movie.Price * this.booking.seats;
+    }
   }
 
   onSubmit(): void {
